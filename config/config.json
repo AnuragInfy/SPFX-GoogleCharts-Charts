@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "charts-panel-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/chartsPanel/ChartsPanelWebPart.js",
+          "manifest": "./src/webparts/chartsPanel/ChartsPanelWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "charts": {
+      "path": "https://www.gstatic.com/charts/loader.js",
+      "globalName": "charts"
+    },
+    "jquery": {
+      "path": "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+      "globalName": "jquery"
+    },
+    "bootstrap": {
+      "path": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+      "globalName": "bootstrap",
+      "globalDependencies": [
+        "jquery"
+      ]
+    }
+  },
+  "localizedResources": {
+    "ChartsPanelWebPartStrings": "lib/webparts/chartsPanel/loc/{locale}.js"
+  }
+}
